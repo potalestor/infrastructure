@@ -1,0 +1,33 @@
+{
+  "id": "realm-test",
+  "realm": "realm-test",
+  "enabled": true,
+  "clients": [
+    {
+      "id": "client-test",
+      "clientId": "client-test",
+      "clientAuthenticatorType": "client-secret",
+      "secret": "syaYK2PHBIAmuBVDZTkh07qpjxBpbU8r",
+      "enabled": true,
+      "serviceAccountsEnabled": true,
+      "authorizationServicesEnabled": true,
+      "protocol": "openid-connect",
+      "attributes": {
+        "client_credentials.use_refresh_token": "true"
+      },
+      "defaultClientScopes": [
+        "client:scope:test"
+      ]
+    }
+  ],
+  "clientScopes": [
+    {
+      "id" : "client-scope-test",
+      "name" : "client:scope:test",
+      "protocol" : "openid-connect",
+      "attributes" : {
+        "include.in.token.scope" : "true"
+      }
+    }
+  ]
+}
