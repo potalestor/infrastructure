@@ -21,6 +21,13 @@ curl --location 'http://localhost:8180/realms/realm-test/protocol/openid-connect
 --data-urlencode 'grant_type=client_credentials' \
 --data-urlencode 'client_id=client-test' \
 --data-urlencode 'client_secret=syaYK2PHBIAmuBVDZTkh07qpjxBpbU8r'
+
+
+curl --location 'https://localhost:8843/realms/realm-test/protocol/openid-connect/token' \
+--header 'Content-Type: application/x-www-form-urlencoded' \
+--data-urlencode 'grant_type=client_credentials' \
+--data-urlencode 'client_id=client-test' \
+--data-urlencode 'client_secret=syaYK2PHBIAmuBVDZTkh07qpjxBpbU8r'
 ```
 
 Response
