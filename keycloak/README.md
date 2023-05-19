@@ -2,7 +2,8 @@
 
 ## Keycloak
 
-Create creds
+### Create creds
+
 ```bash
 openssl req -x509 -out keycloak.crt -keyout keycloak.key \
   -newkey rsa:4096 -nodes -sha256 \
@@ -10,8 +11,7 @@ openssl req -x509 -out keycloak.crt -keyout keycloak.key \
    printf "[dn]\nCN=localhost\n[req]\ndistinguished_name = dn\n[EXT]\nsubjectAltName=DNS:localhost\nkeyUsage=digitalSignature\nextendedKeyUsage=serverAuth")
 ```
 
-
-Request
+### Request
 
 ```bash
 make up
@@ -30,7 +30,7 @@ curl --location 'https://localhost:8843/realms/realm-test/protocol/openid-connec
 --data-urlencode 'client_secret=syaYK2PHBIAmuBVDZTkh07qpjxBpbU8r'
 ```
 
-Response
+### Response
 
 ```json
 {
